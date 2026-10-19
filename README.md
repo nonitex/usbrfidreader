@@ -2,6 +2,8 @@
 
 Linux command-line tool to configure and read the cheap **Sycreader-type USB keyboard RFID reader** (USB ID `ffff:0035`) — no Windows vendor tool needed.
 
+![Sycreader USB RFID reader](reader.png)
+
 These readers act as a USB keyboard and "type" the card number. Out of the box they output only 10 decimal digits (the low 4 bytes of the ID). With this tool you can switch them to e.g. 10 hex digits (the full 5-byte ID), change the suffix characters (Enter, `;`, `,`, `?`), or read card IDs directly without them being typed into the focused window.
 
 The configuration protocol was reverse-engineered from the vendor's Windows tool (`DEMO.exe` + `usb.dll`).
