@@ -1,0 +1,4 @@
+# Sycreader USB keyboard RFID reader (ffff:0035): let the logged-in user
+# configure it (raw USB node) and read it (keyboard event device) without sudo.
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="ffff", ATTR{idProduct}=="0035", GROUP="plugdev", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="input", KERNEL=="event*", ATTRS{idVendor}=="ffff", ATTRS{idProduct}=="0035", GROUP="plugdev", MODE="0660", TAG+="uaccess"
